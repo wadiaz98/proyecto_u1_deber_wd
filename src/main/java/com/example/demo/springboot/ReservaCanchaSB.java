@@ -1,20 +1,23 @@
-package com.example.demo.herencia;
+package com.example.demo.springboot;
 
 import java.time.LocalDateTime;
 
-public class ReservaCanchaH {
+import org.springframework.stereotype.Service;
+
+@Service
+public class ReservaCanchaSB {
 	
 	private String numeroReserva;
 	
-	private UsuarioH usuario;
+	private UsuarioSB usuario;
 	
-	private CanchaH cancha;
+	private CanchaSB cancha;
 	
 	private LocalDateTime fechaCita;
 	
 	private LocalDateTime fechaReserva;
 	
-	public void reservar(String numeroReservaH,LocalDateTime fechaCita, CanchaH canchaH, UsuarioH usuarioH) {
+	public void reservar(String numeroReservaH,LocalDateTime fechaCita, CanchaSB canchaH, UsuarioSB usuarioH) {
 		
 		this.numeroReserva = numeroReservaH;
 		this.fechaCita = fechaCita;
@@ -28,11 +31,11 @@ public class ReservaCanchaH {
 	
 	@Override
 	public String toString() {
-		return "ReservaCanchaSB [numeroReserva=" + numeroReserva + ", usuario=" + usuario + ", cancha=" + cancha
+		return "ReservaCanchaH [numeroReserva=" + numeroReserva + ", usuario=" + usuario + ", cancha=" + cancha
 				+ ", fechaCita=" + fechaCita + ", fechaReserva=" + fechaReserva + "]";
 	}
 
-	private void guardaReserva(ReservaCanchaH reservaCancha) {
+	private void guardaReserva(ReservaCanchaSB reservaCancha) {
 		//Funciona como INSERT al conectarse a la base de datos
 		System.out.println("Se ha reservado la cancha: ");
 		System.out.println(reservaCancha);
@@ -55,19 +58,19 @@ public class ReservaCanchaH {
 		this.fechaReserva = fechaReserva;
 	}
 
-	public UsuarioH getUsuario() {
+	public UsuarioSB getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(UsuarioH usuario) {
+	public void setUsuario(UsuarioSB usuario) {
 		this.usuario = usuario;
 	}
 
-	public CanchaH getCancha() {
+	public CanchaSB getCancha() {
 		return cancha;
 	}
 
-	public void setCancha(CanchaH cancha) {
+	public void setCancha(CanchaSB cancha) {
 		this.cancha = cancha;
 	}
 

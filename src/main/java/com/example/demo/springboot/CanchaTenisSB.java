@@ -1,6 +1,9 @@
-package com.example.demo.herencia;
+package com.example.demo.springboot;
 
-public class CanchaTenisH extends CanchaH{
+import org.springframework.stereotype.Component;
+
+@Component
+public class CanchaTenisSB extends CanchaSB{
 	
 	private String tipoRaqueta;
 	
@@ -21,7 +24,7 @@ public class CanchaTenisH extends CanchaH{
 
 	@Override
 	public String toString() {
-		return super.toString() + "CanchaTenisSB [tipoRaqueta=" + tipoRaqueta + "]";
+		return super.toString() + "CanchaTenisHq [tipoRaqueta=" + tipoRaqueta + "]";
 	}
 	
 	

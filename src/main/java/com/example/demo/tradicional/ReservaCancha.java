@@ -53,6 +53,7 @@ public class ReservaCancha {
 
 	private void guardaReserva(ReservaCancha reservaCancha) {
 		//Funciona como INSERT al conectarse a la base de datos
+		System.out.println("Se ha reservado la cancha:");
 		System.out.println(reservaCancha);
 	}
 	//Set y get
